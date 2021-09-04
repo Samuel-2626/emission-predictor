@@ -30,11 +30,6 @@
     <div class="container text-center">
 			<h1><strong>CO2 Emission Predictor</strong></h1>
 			<hr>
-      {% if prediction_text %}
-        <div class="alert alert-info" role="alert">
-      {{ prediction_text }}
-    </div>
-      {% endif %}
 			<br>
 
     
@@ -63,7 +58,12 @@
         <button type="submit" class="btn btn-warning" style="width: 100%;">Calculate CO2</button>
     </form>
 
-     
+   <br>
+   <br>
+   <div class="alert alert-info" role="alert">
+    {{ prediction_text }}
+  </div>
+   
 
  	<hr>
 		<p>Made with ❤️ and Python. <b>Team Opulent</b> © 2021.</p>
