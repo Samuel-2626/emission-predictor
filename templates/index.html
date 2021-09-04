@@ -30,27 +30,32 @@
     <div class="container text-center">
 			<h1><strong>CO2 Emission Predictor</strong></h1>
 			<hr>
+      {% if prediction_text %}
+        <div class="alert alert-info" role="alert">
+      {{ prediction_text }}
+    </div>
+      {% endif %}
 			<br>
 
     
     <form action="{{ url_for('predict')}}" method="post">
       <h3>Engine Size</h3>
-    	<input type="text" name="Engine Size(L)" required="required" />
+    	<input type="text" name="Engine Size(L)" required="required" class="form-control" />
        <br>
        <h3>Cylinders</h3>
-        <input type="text" name="Cylinders" required="required" />
+        <input type="text" name="Cylinders" required="required" class="form-control" />
         <br>
         <h3>Fuel Consumption City (L/100 km)</h3>
-        <input type="text" name="Fuel Consumption City (L/100 km)" required="required" />
+        <input type="text" name="Fuel Consumption City (L/100 km)" required="required" class="form-control" />
         <br>
         <h3>Fuel Consumption Hwy (L/100 km)</h3>
-		<input type="text" name="Fuel Consumption Hwy (L/100 km)" required="required" />
+		<input type="text" name="Fuel Consumption Hwy (L/100 km)" required="required" class="form-control" />
     <br>
     <h3>Fuel Consumption Comb (L/100 km)</h3>
-        <input type="text" name="Fuel Consumption Comb (L/100 km)" required="required" />
+        <input type="text" name="Fuel Consumption Comb (L/100 km)" required="required" class="form-control" />
         <br>
         <h3>Fuel Consumption Comb (mpg)</h3>
-        <input type="text" name="Fuel Consumption Comb (mpg)" required="required" />
+        <input type="text" name="Fuel Consumption Comb (mpg)" required="required" class="form-control" />
 
         <br>
         
@@ -58,12 +63,7 @@
         <button type="submit" class="btn btn-warning" style="width: 100%;">Calculate CO2</button>
     </form>
 
-   <br>
-   <br>
-   <div class="alert alert-info" role="alert">
-    {{ prediction_text }}
-  </div>
-   
+     
 
  	<hr>
 		<p>Made with ❤️ and Python. <b>Team Opulent</b> © 2021.</p>
