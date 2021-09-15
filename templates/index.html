@@ -43,11 +43,11 @@
     <form action="{{ url_for('predict')}}" method="post">
       <h3>Engine Size (L)</h3>
     	<input name="Engine Size(L)" required="required" class="form-control" type="number" placeholder="" min="1" max="7" />
-		<div class="form-text">This can be obtained with your VIN number . Check your engine size here https://www.autozone.com/vin-decoder.</div>
+		<div class="form-text">This can be obtained with your VIN number . Check your engine size <a href="https://www.autozone.com/vin-decoder" target="_blank">here</a>.</div>
        <br>
        <h3>Cylinders</h3>
         <input name="Cylinders" required="required" class="form-control" type="number" min="4" max="8" />
-		<div class="form-text">How many cylinders does you car have? Read to know how to know how many cylinders you have https://itstillruns.com/determine-many-cylinders-3374.html.</div>
+		<div class="form-text">How many cylinders does you car have? <a href="https://itstillruns.com/determine-many-cylinders-3374.html" target="_blank">learn more</a>.</div>
         <br>
         <h3>Fuel Consumption City (L / 100 km)</h3>
         <input name="Fuel Consumption City (L/100 km)" required="required" class="form-control" type="number" min="1" max="30" />
@@ -55,29 +55,37 @@
         <h3>Fuel Consumption Hwy (L / 100 km)</h3>
 		<input name="Fuel Consumption Hwy (L/100 km)" required="required" class="form-control" type="number" min="1" max="30" />
 		<div class="form-text">
-			<pre>
-				City and highway fuel consumption ratings are shown in litres per 100 kilometres (L/100 km) 
+			
+				City and highway fuel consumption ratings are shown in litres per 100 kilometres (L/100 km)
+				<br> 
 				The following formula is used to calculate fuel consumption in litres / 100km.
+				<br>
 				(Litres used X 100) ÷ km travelled = Litres per 100km.
+				<br>
 				Example a car uses 65 litres to travel 500km
+				<br>
 				(65 X 100) ÷ 500 = 13
-			</pre>
+		
 		</div>
     <br>
     <h3>Fuel Consumption Comb (L / 100 km)</h3>
         <input name="Fuel Consumption Comb (L/100 km)" required="required" class="form-control" type="number" min="1" max="30"/>
-		<div class="form-text">You can convert mpg to l/100km here https://www.mpg-calculator.co.uk/mpg-to-l-100km/</div>
+		<div class="form-text">You can convert mpg to l/100km <a href="https://www.mpg-calculator.co.uk/mpg-to-l-100km/" target="_blank">here</a></div>
         <br>
         <h3>Fuel Consumption Comb (mpg)</h3>
         <input name="Fuel Consumption Comb (mpg)" required="required" class="form-control" type="number" min="1" max="100" />
 		<div class="form-text">
-			<pre>
+		
 			The combined rating (55% city, 45% hwy) is shown in L/100 km and in miles per gallon (mpg).
+			<br>
 			This can be calculated like the following example:
+			<br>
 			City MPG: 30 (55/100 × 30 = 16)
+			<br>
 			Highway MPG: 40 (45 / 100 × 40 = 18)
+			<br>
 			Combined MPG: 16 + 18 = 34
-			</pre>
+		
 		</div>
 
         <br>
